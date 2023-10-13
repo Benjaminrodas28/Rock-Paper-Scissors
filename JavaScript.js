@@ -22,7 +22,16 @@ function playRound(playerSelection, computerSelection){
         }
 }
 
+function game() {
+    
+    const playerSelection = prompt("pick one Rock, Paper, Scissor")
+    const computerSelection = 
+    ["Rock", "Paper", "Scissor"]
+    [ Math.floor(Math.random() * 3)];
 
+
+
+}
 
 
 
