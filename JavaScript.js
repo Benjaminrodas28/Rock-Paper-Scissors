@@ -5,14 +5,14 @@ function playRound(playerSelection, computerSelection){
         ){
             return "It's a tie!"
         } else if (
-            (playerSelection.toLowerCase() === "Rock" &&
-             computerSelection.toLowerCase() === "Scissor")||
+            (playerSelection.toLowerCase() === "rock" &&
+             computerSelection.toLowerCase() === "scissor")||
             
-            (playerSelection.toLowerCase() === "Paper" &&
-             computerSelection.toLowerCase() === "Rock") ||
+            (playerSelection.toLowerCase() === "paper" &&
+             computerSelection.toLowerCase() === "rock") ||
 
-            (playerSelection.toLowerCase() === "Scissor" &&
-             computerSelection.toLowerCase() === "Paper")
+            (playerSelection.toLowerCase() === "scissor" &&
+             computerSelection.toLowerCase() === "paper")
         ) {
             return `You win! ${playerSelection} beats ${computerSelection}.`
         } else {
@@ -37,8 +37,16 @@ document.addEventListener("click",function game() {
         } else if(result.includes("lose")){
             computerScore++
         }
-
-
+    }
+    
+    if (playerScore > computerScore){
+        console.log(
+            `You win! Final Score ${playerScore}-${computerScore}.` 
+        ) ;
+    } else if (computerScore > playerScore){
+        console.log(
+            `You lose! Final Score ${computerScore}-${playerScore}`
+        )
     }
 })
 
